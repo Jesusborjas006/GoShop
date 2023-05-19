@@ -7,17 +7,13 @@ const ItemList = (props) => {
       name={item.name}
       category={item.category}
       price={item.price}
+      img={item.image}
       id={item.id}
       key={item.id}
     />
   ));
 
-  return (
-    <div className="items-container">
-      {itemElements}
-    </div>
-
-  ) 
-}
+  return <div className="items-container">{itemElements}</div>;
+};
 
 export default ItemList;

@@ -4,6 +4,8 @@ const itemsData = [
     name: "AirPods",
     category: "technology",
     price: 100,
+    image:
+      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MME73?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1632861342000",
   },
   {
     id: 2,
