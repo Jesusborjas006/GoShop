@@ -5,10 +5,11 @@ import ItemList from "../ItemList/ItemList";
 
 function App() {
   const [items, setItems] = useState(itemsData);
+  console.log(setItems);
 
   return (
     <main className="main">
-      <ItemList items={items}/>
+      <ItemList items={items} />
     </main>
   );
 }
