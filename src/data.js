@@ -1,4 +1,4 @@
-const items = [
+const itemsData = [
   {
     id: 1,
     name: "AirPods",
@@ -55,4 +55,4 @@ const items = [
   },
 ];
 
-export default items;
+export default itemsData;
