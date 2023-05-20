@@ -6,16 +6,35 @@ import ItemList from "../ItemList/ItemList";
 function App() {
   const [allItems, setAllItems] = useState(itemsData);
   const [filteredItems, setFilteredItems] = useState(allItems);
-  console.log(setAllItems)
+  const [sortedItems, setSortedItems] = useState({ value: "" });
+
+  console.log(setAllItems);
 
   const getFilteredItems = (type) => {
     const filtered = allItems.filter((item) => item.category === type);
     setFilteredItems(filtered);
   };
 
+  const handleChange = (event) => {
+    setSortedItems({ value: event.target.value });
+  };
+
+  if (sortedItems.value === "Low") {
+    filteredItems.sort((a, b) => a.price - b.price);
+  } else if (sortedItems.value === "High") {
+    filteredItems.sort((a, b) => b.price - a.price);
+  }
+
   return (
     <main className="main">
       <div className="filter-btn-container">
+        <form>
+          <select value={sortedItems.value} onChange={handleChange}>
+            <option value="">Sort By</option>
+            <option value="Low">Price (Low to High)</option>
+            <option value="High">Price (High to Low)</option>
+          </select>
+        </form>
         <button
           onClick={() => getFilteredItems("technology")}
           className="category-btn"
