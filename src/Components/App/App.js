@@ -8,7 +8,7 @@ function App() {
   const [filteredItems, setFilteredItems] = useState(allItems);
   const [sortedItems, setSortedItems] = useState({ value: "" });
 
-  console.log("all items state<>>", allItems);
+  console.log(setAllItems);
 
   const getFilteredItems = (type) => {
     const filtered = allItems.filter((item) => item.category === type);
