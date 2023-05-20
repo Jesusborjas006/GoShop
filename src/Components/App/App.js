@@ -9,7 +9,7 @@ function App() {
   const [allItems, setAllItems] = useState(itemsData);
   const [filteredItems, setFilteredItems] = useState(allItems);
   const [sortedItems, setSortedItems] = useState({ value: "" });
-  console.log(setAllItems);
+  // console.log(setAllItems);
 
   const getFilteredItems = (type) => {
     const filtered = allItems.filter((item) => item.category === type);
@@ -30,44 +30,12 @@ function App() {
     <main className="main">
       <Navbar />
 
-      {/* <div className="filter-btn-container">
-        <form>
-          <select value={sortedItems.value} onChange={handleChange}>
-            <option value="">Sort By</option>
-            <option value="Low">Price (Low to High)</option>
-            <option value="High">Price (High to Low)</option>
-          </select>
-        </form> */}
-
-      {/* <button
-          onClick={() => getFilteredItems("technology")}
-          className="category-btn"
-        >
-          Technology
-        </button>
-        <button
-          onClick={() => getFilteredItems("pet supplies")}
-          className="category-btn"
-        >
-          Pet Supplies
-        </button>
-        <button
-          onClick={() => getFilteredItems("personal care")}
-          className="category-btn"
-        >
-          Personal Care
-        </button> */}
-      {/* {filteredItems.length <= 3 && (
-          <button
-            onClick={() => setFilteredItems(allItems)}
-            className="category-btn"
-          >
-            Show All
-          </button>
-        )}
-      </div> */}
       <div className="main-content">
-        <Category />
+        <Category
+          filterFunc={getFilteredItems}
+          allItems={allItems}
+          setFilteredItems={setFilteredItems}
+        />
         <ItemList items={filteredItems} />
       </div>
     </main>

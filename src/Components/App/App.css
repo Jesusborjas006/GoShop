@@ -47,9 +47,10 @@
   background-color: #dff6ff;
 }
 
+/* Items Container */
 .items-container {
-  width: 90%;
-  margin: 10vh auto 0;
+  width: 80vw;
+  margin: 5vh 3vw 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -60,6 +61,7 @@
   padding: 10px;
   cursor: pointer;
   transition: all ease-in-out 0.2s;
+  height: 300px;
 }
 
 .item-card:hover {
