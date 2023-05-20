@@ -5,6 +5,14 @@
   font-family: sans-serif;
 }
 
+/* Navbar */
+.navbar {
+  padding: 15px 25px;
+  background-color: rgb(35, 146, 250);
+  color: #fff;
+}
+
+/*  */
 .items-container {
   width: 90%;
   margin: 10vh auto 0;

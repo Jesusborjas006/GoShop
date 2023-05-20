@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import itemsData from "../../data";
 import ItemList from "../ItemList/ItemList";
+import Navbar from "../Navbar/Navbar";
 
 function App() {
   const [allItems, setAllItems] = useState(itemsData);
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <main className="main">
+      <Navbar />
       <div className="filter-btn-container">
         <form>
           <select value={sortedItems.value} onChange={handleChange}>
