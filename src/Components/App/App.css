@@ -7,12 +7,46 @@
 
 /* Navbar */
 .navbar {
-  padding: 15px 25px;
+  padding: 1.5vh 25px;
+  height: 6vh;
   background-color: rgb(35, 146, 250);
   color: #fff;
 }
 
-/*  */
+/* Main Container */
+.main-content {
+  display: flex;
+  margin: auto;
+  min-height: 94vh;
+}
+
+/* Category Sidebar */
+.category-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: #06283d;
+  color: #fff;
+  width: 20vw;
+}
+
+.sidebar-heading {
+  margin: 25px;
+  font-weight: 500;
+}
+
+.category-btn {
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  padding: 16px 25px;
+}
+
+.category-btn:hover {
+  color: #000;
+  background-color: #dff6ff;
+}
+
 .items-container {
   width: 90%;
   margin: 10vh auto 0;

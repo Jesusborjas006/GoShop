@@ -3,12 +3,12 @@ import "./App.css";
 import itemsData from "../../data";
 import ItemList from "../ItemList/ItemList";
 import Navbar from "../Navbar/Navbar";
+import Category from "../Category/Category";
 
 function App() {
   const [allItems, setAllItems] = useState(itemsData);
   const [filteredItems, setFilteredItems] = useState(allItems);
   const [sortedItems, setSortedItems] = useState({ value: "" });
-
   console.log(setAllItems);
 
   const getFilteredItems = (type) => {
@@ -29,15 +29,17 @@ function App() {
   return (
     <main className="main">
       <Navbar />
-      <div className="filter-btn-container">
+
+      {/* <div className="filter-btn-container">
         <form>
           <select value={sortedItems.value} onChange={handleChange}>
             <option value="">Sort By</option>
             <option value="Low">Price (Low to High)</option>
             <option value="High">Price (High to Low)</option>
           </select>
-        </form>
-        <button
+        </form> */}
+
+      {/* <button
           onClick={() => getFilteredItems("technology")}
           className="category-btn"
         >
@@ -54,8 +56,8 @@ function App() {
           className="category-btn"
         >
           Personal Care
-        </button>
-        {filteredItems.length <= 3 && (
+        </button> */}
+      {/* {filteredItems.length <= 3 && (
           <button
             onClick={() => setFilteredItems(allItems)}
             className="category-btn"
@@ -63,9 +65,11 @@ function App() {
             Show All
           </button>
         )}
+      </div> */}
+      <div className="main-content">
+        <Category />
+        <ItemList items={filteredItems} />
       </div>
-
-      <ItemList items={filteredItems} />
     </main>
   );
 }
