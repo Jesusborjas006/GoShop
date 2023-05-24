@@ -1,7 +1,6 @@
 import "../App/App.css";
 
 const Item = (props) => {
-  console.log(props);
   return (
     <div className="item-card">
       <img className="product-img" src={props.img} alt="Product " />

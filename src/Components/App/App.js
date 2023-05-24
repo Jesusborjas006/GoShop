@@ -7,6 +7,7 @@ import Category from "../Category/Category";
 
 function App() {
   const [allItems, setAllItems] = useState(itemsData);
+  console.log(setAllItems)
   const [filteredItems, setFilteredItems] = useState(allItems);
 
   const getFilteredItems = (type) => {
