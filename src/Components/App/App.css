@@ -48,8 +48,18 @@
 }
 
 /* Items Container */
-.items-container {
+.right-content {
   width: 80vw;
+}
+
+.total-products {
+  text-align: center;
+  margin-top: 5vh;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.items-container {
   margin: 5vh 3vw 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);

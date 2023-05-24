@@ -4,27 +4,16 @@ import itemsData from "../../data";
 import ItemList from "../ItemList/ItemList";
 import Navbar from "../Navbar/Navbar";
 import Category from "../Category/Category";
+import Form from "../Form/Form";
 
 function App() {
   const [allItems, setAllItems] = useState(itemsData);
   const [filteredItems, setFilteredItems] = useState(allItems);
-  const [sortedItems, setSortedItems] = useState({ value: "" });
-  // console.log(setAllItems);
 
   const getFilteredItems = (type) => {
     const filtered = allItems.filter((item) => item.category === type);
     setFilteredItems(filtered);
   };
-
-  const handleChange = (event) => {
-    setSortedItems({ value: event.target.value });
-  };
-
-  if (sortedItems.value === "Low") {
-    filteredItems.sort((a, b) => a.price - b.price);
-  } else if (sortedItems.value === "High") {
-    filteredItems.sort((a, b) => b.price - a.price);
-  }
 
   return (
     <main className="main">
@@ -36,7 +25,12 @@ function App() {
           allItems={allItems}
           setFilteredItems={setFilteredItems}
         />
-        <ItemList items={filteredItems} />
+        <div className="right-content">
+          <h3 className="total-products">
+            {filteredItems.length} total products.
+          </h3>
+          <ItemList items={filteredItems} />
+        </div>
       </div>
     </main>
   );

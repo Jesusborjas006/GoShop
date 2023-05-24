@@ -1,7 +1,6 @@
 import "../App/App.css";
 
 const Category = (props) => {
-  console.log(props);
   return (
     <div className="category-sidebar">
       <h2 className="sidebar-heading">Category</h2>
