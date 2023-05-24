@@ -10,11 +10,26 @@ const Category = (props) => {
       >
         All
       </p>
+      <p onClick={() => props.filterFunc("clothes")} className="category-btn">
+        Clothes
+      </p>
+      <p
+        onClick={() => props.filterFunc("grocery")}
+        className="category-btn"
+      >
+        Grocery
+      </p>
       <p
         onClick={() => props.filterFunc("technology")}
         className="category-btn"
       >
         Technology
+      </p>
+      <p
+        onClick={() => props.filterFunc("toy")}
+        className="category-btn"
+      >
+        Toys
       </p>
       <p
         onClick={() => props.filterFunc("pet supplies")}

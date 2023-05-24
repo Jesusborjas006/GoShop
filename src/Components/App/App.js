@@ -4,7 +4,6 @@ import itemsData from "../../data";
 import ItemList from "../ItemList/ItemList";
 import Navbar from "../Navbar/Navbar";
 import Category from "../Category/Category";
-import Form from "../Form/Form";
 
 function App() {
   const [allItems, setAllItems] = useState(itemsData);
@@ -27,7 +26,9 @@ function App() {
         />
         <div className="right-content">
           <h3 className="total-products">
-            {filteredItems.length} total products.
+            {filteredItems.length === 1
+              ? "1 product"
+              : `${filteredItems.length} total products`}
           </h3>
           <ItemList items={filteredItems} />
         </div>
