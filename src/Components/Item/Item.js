@@ -7,6 +7,7 @@ const Item = (props) => {
       <div className="text-content">
         <h3 className="product-name">{props.name}</h3>
         <p className="product-price">${props.price}</p>
+        <button className="add-btn">Add to cart</button>
       </div>
     </div>
   );
