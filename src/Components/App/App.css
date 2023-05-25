@@ -10,6 +10,12 @@ a {
   text-decoration: none;
 }
 
+/* Material UI */
+.badge {
+  font-size: 4rem;
+  border: 2px solid red;
+}
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -130,4 +136,20 @@ a {
   cursor: pointer;
   position: absolute;
   bottom: 10px;
+}
+
+/* Cart Page */
+.shop-link {
+  text-decoration: solid;
+  color: #028ce2;
+}
+
+.cart-card {
+  border: 2px solid #028ce2;
+  text-align: center;
+  width: 30vw;
+  margin: 30vh auto 0;
+  padding: 20px;
+  line-height: 1.5;
+  border-radius: 10px;
 }
