@@ -15,17 +15,20 @@ const OrderSummary = (props) => {
         <div className="orders-card">
           {orderedItems}
           <div className="orders-card-footer">
-            <div>
-              <p>Subtotal</p>
+            <div className="card-footer-container">
+              <p className="card-footer-text">Subtotal</p>
+              <p>$10.00</p>
             </div>
-            <div>
-              <p>Shipping</p>
+            <div className="card-footer-container">
+              <p className="card-footer-text">Shipping</p>
+              <p>--</p>
             </div>
             <hr />
-            <div>
-              <p>Total(US)</p>
+            <div className="card-footer-container">
+              <p className="card-footer-text">Total(US)</p>
+              <p className="total-price">$10.00</p>
             </div>
-            <button>Confirm Order</button>
+            <button className="order-btn">Confirm Order</button>
           </div>
         </div>
       </div>
