@@ -5,12 +5,13 @@ import ItemList from "../ItemList/ItemList";
 import Navbar from "../Navbar/Navbar";
 import Category from "../Category/Category";
 import { Link, Route } from "react-router-dom";
+import OrderSummary from "../OrderSummary/OrderSummary";
+import EmptyCart from "../EmptyCart/EmptyCart";
 
 function App() {
   const [allItems, setAllItems] = useState(itemsData);
   const [filteredItems, setFilteredItems] = useState(allItems);
   const [itemsAdded, setItemsAdded] = useState([]);
-  console.log(itemsAdded);
 
   const getFilteredItems = (type) => {
     const filtered = allItems.filter((item) => item.category === type);
@@ -46,14 +47,9 @@ function App() {
       <Route exact path="/cart">
         <div className="main-cart-page">
           {itemsAdded.length === 0 ? (
-            <div className="cart-card">
-              <h3>Your GoShop Cart is empty</h3>
-              <Link to="/" className="shop-link">
-                Start shopping now
-              </Link>
-            </div>
+            <EmptyCart />
           ) : (
-            <p>Items are added</p>
+            <OrderSummary itemsInCart={itemsAdded} />
           )}
         </div>
       </Route>
