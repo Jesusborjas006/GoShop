@@ -8,20 +8,25 @@ import { Link, Route } from "react-router-dom";
 
 function App() {
   const [allItems, setAllItems] = useState(itemsData);
-  console.log(setAllItems);
   const [filteredItems, setFilteredItems] = useState(allItems);
-  const [itemsAdded, setItemsAdded] = useState(0);
+  const [itemsAdded, setItemsAdded] = useState([]);
+  const [numOfItems, setNumOfItems] = useState(0);
+  console.log(itemsAdded);
+  console.log(numOfItems);
 
   const getFilteredItems = (type) => {
     const filtered = allItems.filter((item) => item.category === type);
     setFilteredItems(filtered);
   };
 
-  
+  const addToCart = (item) => {
+    setItemsAdded((prevArray) => [...prevArray, item]);
+    setNumOfItems((prevNum) => prevNum + 1);
+  };
 
   return (
     <main className="main">
-      <Navbar />
+      <Navbar numOfItems={numOfItems}/>
 
       <Route exact path="/">
         <div className="main-content">
@@ -36,7 +41,7 @@ function App() {
                 ? "1 product"
                 : `${filteredItems.length} total products`}
             </h3>
-            <ItemList items={filteredItems} />
+            <ItemList items={filteredItems} addToCart={addToCart} />
           </div>
         </div>
       </Route>

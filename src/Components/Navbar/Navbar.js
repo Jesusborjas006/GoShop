@@ -4,7 +4,7 @@ import Badge from "@mui/material/Badge";
 import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <nav className="navbar">
       <Link to="/">
@@ -16,7 +16,7 @@ const Navbar = () => {
             sx={{
               "& .MuiBadge-badge": { fontSize: 18, height: 22, minWidth: 22 },
             }}
-            badgeContent={1}
+            badgeContent={props.numOfItems}
             color="secondary"
           >
             <ShoppingCartIcon
