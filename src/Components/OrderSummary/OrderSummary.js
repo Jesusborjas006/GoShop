@@ -2,18 +2,33 @@ import "../App/App.css";
 import OrderedItem from "../OrderedItem/OrderedItem";
 
 const OrderSummary = (props) => {
-  console.log(props.itemsInCart.length);
+  // const orderedItems = props.itemsInCart.map((item) => (
+  //   <OrderedItem name={item} key={Math.random()} />
+  //   ));
 
-  const orderedItems = props.itemsInCart.map((item) => (
-    <OrderedItem name={item} key={Math.random()} />
+  const itemsNameInCart = props.itemsInCart.map((item) => item);
+  console.log(itemsNameInCart);
+
+  const itemsObject = props.allItems.filter((item) =>
+    itemsNameInCart.includes(item.name)
+  );
+
+  const orderedItemsElement = itemsObject.map((item) => (
+    <OrderedItem
+      name={item.name}
+      price={item.price}
+      img={item.image}
+      key={Math.random()}
+    />
   ));
+  console.log(itemsObject);
 
   return (
     <main className="summary-page">
       <div className="orders-container">
         <h3 className="order-heading">Order Summary</h3>
         <div className="orders-card">
-          {orderedItems}
+          {orderedItemsElement}
           <div className="orders-card-footer">
             <div className="card-footer-container">
               <p className="card-footer-text">Subtotal</p>

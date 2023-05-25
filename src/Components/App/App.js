@@ -49,7 +49,7 @@ function App() {
           {itemsAdded.length === 0 ? (
             <EmptyCart />
           ) : (
-            <OrderSummary itemsInCart={itemsAdded} />
+            <OrderSummary itemsInCart={itemsAdded} allItems={allItems} />
           )}
         </div>
       </Route>

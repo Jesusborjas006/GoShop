@@ -4,8 +4,11 @@ const OrderedItem = (props) => {
   // console.log(props);
   return (
     <div className="ordered-item">
+      <img className="cart-item-img" src={props.img} alt="Product"/>
+      <div className="ordered-item-text">
       <p>{props.name}</p>
-      <hr />
+      <p>${props.price}</p>
+      </div>
     </div>
   );
 };

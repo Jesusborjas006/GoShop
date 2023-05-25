@@ -216,3 +216,12 @@ a {
 .order-btn:hover {
   background-color: #028ce2;
 }
+
+/* Ordered Item */
+.ordered-item {
+  display: flex;
+}
+
+.cart-item-img {
+  width: 100px;
+}
