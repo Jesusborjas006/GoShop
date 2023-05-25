@@ -10,9 +10,7 @@ function App() {
   const [allItems, setAllItems] = useState(itemsData);
   const [filteredItems, setFilteredItems] = useState(allItems);
   const [itemsAdded, setItemsAdded] = useState([]);
-  const [numOfItems, setNumOfItems] = useState(0);
   console.log(itemsAdded);
-  console.log(numOfItems);
 
   const getFilteredItems = (type) => {
     const filtered = allItems.filter((item) => item.category === type);
@@ -21,12 +19,11 @@ function App() {
 
   const addToCart = (item) => {
     setItemsAdded((prevArray) => [...prevArray, item]);
-    setNumOfItems((prevNum) => prevNum + 1);
   };
 
   return (
     <main className="main">
-      <Navbar numOfItems={numOfItems}/>
+      <Navbar numOfItems={itemsAdded} />
 
       <Route exact path="/">
         <div className="main-content">
@@ -48,12 +45,16 @@ function App() {
 
       <Route exact path="/cart">
         <div className="main-cart-page">
-          <div className="cart-card">
-            <h3>Your GoShop Cart is empty</h3>
-            <Link to="/" className="shop-link">
-              Start shopping now
-            </Link>
-          </div>
+          {itemsAdded.length === 0 ? (
+            <div className="cart-card">
+              <h3>Your GoShop Cart is empty</h3>
+              <Link to="/" className="shop-link">
+                Start shopping now
+              </Link>
+            </div>
+          ) : (
+            <p>Items are added</p>
+          )}
         </div>
       </Route>
     </main>

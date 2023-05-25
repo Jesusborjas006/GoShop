@@ -16,7 +16,7 @@ const Navbar = (props) => {
             sx={{
               "& .MuiBadge-badge": { fontSize: 18, height: 22, minWidth: 22 },
             }}
-            badgeContent={props.numOfItems}
+            badgeContent={props.numOfItems.length}
             color="secondary"
           >
             <ShoppingCartIcon
