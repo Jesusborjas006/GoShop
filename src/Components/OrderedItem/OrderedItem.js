@@ -5,6 +5,7 @@ const OrderedItem = (props) => {
   return (
     <div className="ordered-item">
       <p>{props.name}</p>
+      <hr />
     </div>
   );
 };
