@@ -161,11 +161,11 @@ a {
 }
 
 .orders-container {
-  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 6vh 0;
 }
 
 .order-heading {
@@ -220,8 +220,16 @@ a {
 /* Ordered Item */
 .ordered-item {
   display: flex;
+  align-items: center;
+  margin: 12px 0;
 }
 
 .cart-item-img {
-  width: 100px;
+  width: 80px;
+  min-height: 80px;
+}
+
+.ordered-item-text {
+  line-height: 1.6;
+  margin-left: 10px;
 }
