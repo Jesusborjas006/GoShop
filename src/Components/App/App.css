@@ -227,6 +227,7 @@ a {
 .cart-item-img {
   width: 80px;
   min-height: 80px;
+  max-height: 80px;
 }
 
 .ordered-item-text {

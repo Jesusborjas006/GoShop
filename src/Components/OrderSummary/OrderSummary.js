@@ -2,16 +2,15 @@ import "../App/App.css";
 import OrderedItem from "../OrderedItem/OrderedItem";
 
 const OrderSummary = (props) => {
-  // const orderedItems = props.itemsInCart.map((item) => (
-  //   <OrderedItem name={item} key={Math.random()} />
-  //   ));
-
   const itemsNameInCart = props.itemsInCart.map((item) => item);
-  console.log(itemsNameInCart);
 
   const itemsObject = props.allItems.filter((item) =>
     itemsNameInCart.includes(item.name)
   );
+
+  const totalPrice = itemsObject.reduce((acc, initial) => {
+    return acc + initial.price;
+  }, 0);
 
   const orderedItemsElement = itemsObject.map((item) => (
     <OrderedItem
@@ -21,7 +20,6 @@ const OrderSummary = (props) => {
       key={Math.random()}
     />
   ));
-  console.log(itemsObject);
 
   return (
     <main className="summary-page">
@@ -32,7 +30,7 @@ const OrderSummary = (props) => {
           <div className="orders-card-footer">
             <div className="card-footer-container">
               <p className="card-footer-text">Subtotal</p>
-              <p>$10.00</p>
+              <p>${totalPrice.toFixed(2)}</p>
             </div>
             <div className="card-footer-container">
               <p className="card-footer-text">Shipping</p>
@@ -41,7 +39,7 @@ const OrderSummary = (props) => {
             <hr />
             <div className="card-footer-container">
               <p className="card-footer-text">Total(US)</p>
-              <p className="total-price">$10.00</p>
+              <p className="total-price">${totalPrice.toFixed(2)}</p>
             </div>
             <button className="order-btn">Confirm Order</button>
           </div>

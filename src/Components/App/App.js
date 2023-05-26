@@ -4,7 +4,7 @@ import itemsData from "../../data";
 import ItemList from "../ItemList/ItemList";
 import Navbar from "../Navbar/Navbar";
 import Category from "../Category/Category";
-import { Link, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import OrderSummary from "../OrderSummary/OrderSummary";
 import EmptyCart from "../EmptyCart/EmptyCart";
 
