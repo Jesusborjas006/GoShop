@@ -10,6 +10,7 @@ const ItemList = (props) => {
       img={item.image}
       id={item.id}
       key={item.id}
+      addToCart={props.addToCart}
     />
   ));
 
