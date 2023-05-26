@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../App/App.css";
 import OrderedItem from "../OrderedItem/OrderedItem";
 
@@ -23,6 +24,7 @@ const OrderSummary = (props) => {
 
   return (
     <main className="summary-page">
+      <Link to="/" className="back-btn">Continue Shopping</Link>
       <div className="orders-container">
         <h3 className="order-heading">Order Summary</h3>
         <div className="orders-card">
