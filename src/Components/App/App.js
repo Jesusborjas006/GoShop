@@ -7,6 +7,7 @@ import Category from "../Category/Category";
 import { Route } from "react-router-dom";
 import OrderSummary from "../OrderSummary/OrderSummary";
 import EmptyCart from "../EmptyCart/EmptyCart";
+import OrderCompleted from "../OrderCompleted/OrderCompleted";
 
 function App() {
   const [allItems, setAllItems] = useState(itemsData);
@@ -52,6 +53,10 @@ function App() {
             <OrderSummary itemsInCart={itemsAdded} allItems={allItems} />
           )}
         </div>
+      </Route>
+
+      <Route path="/completed">
+        <OrderCompleted />
       </Route>
     </main>
   );

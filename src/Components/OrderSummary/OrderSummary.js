@@ -24,7 +24,9 @@ const OrderSummary = (props) => {
 
   return (
     <main className="summary-page">
-      <Link to="/" className="back-btn">Continue Shopping</Link>
+      <Link to="/" className="back-btn">
+        Continue Shopping
+      </Link>
       <div className="orders-container">
         <h3 className="order-heading">Order Summary</h3>
         <div className="orders-card">
@@ -43,7 +45,9 @@ const OrderSummary = (props) => {
               <p className="card-footer-text">Total(US)</p>
               <p className="total-price">${totalPrice.toFixed(2)}</p>
             </div>
-            <button className="order-btn">Confirm Order</button>
+            <Link to="/completed">
+              <button className="order-btn">Confirm Order</button>
+            </Link>
           </div>
         </div>
       </div>
