@@ -11,6 +11,7 @@ const ItemList = (props) => {
       id={item.id}
       key={item.id}
       addToCart={props.addToCart}
+      itemsAdded={props.itemsAdded}
     />
   ));
 

@@ -13,7 +13,6 @@ function App() {
   const [allItems, setAllItems] = useState(itemsData);
   const [filteredItems, setFilteredItems] = useState(allItems);
   const [itemsAdded, setItemsAdded] = useState([]);
-  console.log(itemsAdded);
 
   const getFilteredItems = (type) => {
     const filtered = allItems.filter((item) => item.category === type);
@@ -45,7 +44,11 @@ function App() {
                 ? "1 product"
                 : `${filteredItems.length} total products`}
             </h3>
-            <ItemList items={filteredItems} addToCart={addToCart} />
+            <ItemList
+              items={filteredItems}
+              addToCart={addToCart}
+              itemsAdded={itemsAdded}
+            />
           </div>
         </div>
       </Route>
