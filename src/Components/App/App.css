@@ -150,9 +150,9 @@ a {
   border-radius: 10px;
   padding: 7px;
   font-size: 17px;
-  cursor: pointer;
   position: absolute;
   bottom: 10px;
+  cursor: not-allowed;
 }
 
 /* Cart Page */
@@ -266,14 +266,35 @@ a {
   max-height: 80px;
 }
 
+.ordered-item-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .ordered-item-text {
   line-height: 1.6;
   margin-left: 10px;
 }
 
+.remove-btn {
+  border: none;
+  border-radius: 10px;
+  background-color: #dd1515;
+  color: #fff;
+  padding: 1vh 1vw;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.remove-btn:hover {
+  background-color: #ff0000;
+}
+
 /* Completed Order Page */
 .order-completed-page {
-  min-height: 92vh;
+  max-height: 92vh;
 }
 
 .completed-card {

@@ -20,11 +20,20 @@ function App() {
   };
 
   const addToCart = (item) => {
-    setItemsAdded((prevArray) => [...prevArray, item]);
+    if (!itemsAdded.includes(item)) {
+      setItemsAdded((prevArray) => [...prevArray, item]);
+    } else {
+      alert("Item already added to cart");
+    }
   };
 
   const resetCart = () => {
     setItemsAdded([]);
+  };
+
+  const removeItem = (name) => {
+    const removedItems = itemsAdded.filter((item) => item !== name);
+    setItemsAdded(removedItems);
   };
 
   return (
@@ -62,6 +71,7 @@ function App() {
               itemsInCart={itemsAdded}
               allItems={allItems}
               resetCart={resetCart}
+              removeItem={removeItem}
             />
           )}
         </div>

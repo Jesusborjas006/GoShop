@@ -19,6 +19,7 @@ const OrderSummary = (props) => {
       price={item.price}
       img={item.image}
       key={Math.random()}
+      removeItem={props.removeItem}
     />
   ));
 
@@ -45,8 +46,10 @@ const OrderSummary = (props) => {
               <p className="card-footer-text">Total(US)</p>
               <p className="total-price">${totalPrice.toFixed(2)}</p>
             </div>
-            <Link to="/completed" onClick={() => props.resetCart()} >
-              <button onClick={() => props.resetCart()} className="order-btn">Confirm Order</button>
+            <Link to="/completed" onClick={() => props.resetCart()}>
+              <button onClick={() => props.resetCart()} className="order-btn">
+                Confirm Order
+              </button>
             </Link>
           </div>
         </div>
