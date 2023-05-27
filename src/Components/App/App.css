@@ -138,6 +138,23 @@ a {
   bottom: 10px;
 }
 
+.add-btn:hover {
+  background-color: #0a639b;
+  color: #fff;
+}
+
+.add-btn-active {
+  background-color: green;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 7px;
+  font-size: 17px;
+  position: absolute;
+  bottom: 10px;
+  cursor: not-allowed;
+}
+
 /* Cart Page */
 .shop-link {
   border-bottom: 2px solid #028ce2;
@@ -166,12 +183,17 @@ a {
 
 .back-btn {
   padding: 10px;
-  background-color: #028ce2;
+  background-color: #06283d;
   border-radius: 8px;
   position: relative;
   top: 5vh;
   left: 3vw;
   font-size: 18px;
+}
+
+.back-btn:hover {
+  background-color: #028ce2;
+  color: #fff;
 }
 
 .orders-container {
@@ -244,7 +266,60 @@ a {
   max-height: 80px;
 }
 
+.ordered-item-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .ordered-item-text {
   line-height: 1.6;
   margin-left: 10px;
+}
+
+.remove-btn {
+  border: none;
+  border-radius: 10px;
+  background-color: #dd1515;
+  color: #fff;
+  padding: 1vh 1vw;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.remove-btn:hover {
+  background-color: #ff0000;
+}
+
+/* Completed Order Page */
+.order-completed-page {
+  max-height: 92vh;
+}
+
+.completed-card {
+  text-align: center;
+  width: 35vw;
+  margin: 10vh auto 0;
+  padding: 40px;
+  line-height: 2;
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+
+.completed-img {
+  width: 100%;
+}
+
+.explore-items-btn {
+  color: rgb(35, 146, 250);
+  border: 1px solid #028ce2;
+  border-radius: 24px;
+  padding: 10px 15px;
+  font-size: 18px;
+}
+
+.explore-items-btn:hover {
+  background-color: #028ce2;
+  color: #fff;
 }

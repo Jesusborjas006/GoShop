@@ -7,6 +7,7 @@ import Category from "../Category/Category";
 import { Route } from "react-router-dom";
 import OrderSummary from "../OrderSummary/OrderSummary";
 import EmptyCart from "../EmptyCart/EmptyCart";
+import OrderCompleted from "../OrderCompleted/OrderCompleted";
 
 function App() {
   const [allItems, setAllItems] = useState(itemsData);
@@ -19,7 +20,20 @@ function App() {
   };
 
   const addToCart = (item) => {
-    setItemsAdded((prevArray) => [...prevArray, item]);
+    if (!itemsAdded.includes(item)) {
+      setItemsAdded((prevArray) => [...prevArray, item]);
+    } else {
+      alert("Item already added to cart");
+    }
+  };
+
+  const resetCart = () => {
+    setItemsAdded([]);
+  };
+
+  const removeItem = (name) => {
+    const removedItems = itemsAdded.filter((item) => item !== name);
+    setItemsAdded(removedItems);
   };
 
   return (
@@ -39,7 +53,11 @@ function App() {
                 ? "1 product"
                 : `${filteredItems.length} total products`}
             </h3>
-            <ItemList items={filteredItems} addToCart={addToCart} />
+            <ItemList
+              items={filteredItems}
+              addToCart={addToCart}
+              itemsAdded={itemsAdded}
+            />
           </div>
         </div>
       </Route>
@@ -49,9 +67,18 @@ function App() {
           {itemsAdded.length === 0 ? (
             <EmptyCart />
           ) : (
-            <OrderSummary itemsInCart={itemsAdded} allItems={allItems} />
+            <OrderSummary
+              itemsInCart={itemsAdded}
+              allItems={allItems}
+              resetCart={resetCart}
+              removeItem={removeItem}
+            />
           )}
         </div>
+      </Route>
+
+      <Route path="/completed">
+        <OrderCompleted />
       </Route>
     </main>
   );
