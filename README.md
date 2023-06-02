@@ -17,9 +17,9 @@ GoShop is an online e-commerce site built during Mod 4 of Turing School of Softw
 1. Copy and paste the generated `localServer` address that your terminal provides into your browser address bar.
 
 ## Preview of App:
-<img width="1208" alt="Screenshot 2023-06-02 at 1 25 39 PM" src="https://github.com/Jesusborjas006/GoShop/assets/111095858/250c5ce8-1b6d-4756-b5a9-94dc3018e2a9">
-<img width="1208" alt="Screenshot 2023-06-02 at 1 26 06 PM" src="https://github.com/Jesusborjas006/GoShop/assets/111095858/c88c9b2c-4dfd-4e7d-a8a1-5fe6831c25e7">
-<img width="1208" alt="Screenshot 2023-06-02 at 1 28 35 PM" src="https://github.com/Jesusborjas006/GoShop/assets/111095858/69ae84af-49b1-4807-a339-c69bb57ef9a4">
+<img width="708" alt="Screenshot 2023-06-02 at 1 25 39 PM" src="https://github.com/Jesusborjas006/GoShop/assets/111095858/250c5ce8-1b6d-4756-b5a9-94dc3018e2a9">
+<img width="708" alt="Screenshot 2023-06-02 at 1 26 06 PM" src="https://github.com/Jesusborjas006/GoShop/assets/111095858/c88c9b2c-4dfd-4e7d-a8a1-5fe6831c25e7">
+<img width="708" alt="Screenshot 2023-06-02 at 1 28 35 PM" src="https://github.com/Jesusborjas006/GoShop/assets/111095858/69ae84af-49b1-4807-a339-c69bb57ef9a4">
 
 
 ## Technologies Used: 
