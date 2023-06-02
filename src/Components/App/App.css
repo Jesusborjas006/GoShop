@@ -323,3 +323,145 @@ a {
   background-color: #028ce2;
   color: #fff;
 }
+
+/* Media Queries */
+/* Mobile */
+@media only screen and (max-width: 500px) {
+  .category-sidebar {
+    width: 40vw;
+  }
+
+  .right-content {
+    width: 60vw;
+  }
+
+  .sidebar-heading {
+    margin: 25px 16px;
+    font-size: 1.3rem;
+  }
+
+  .category-btn {
+    padding: 16px;
+  }
+
+  .total-products {
+    font-size: 1.4rem;
+  }
+
+  .items-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .cart-card,
+  .completed-card {
+    width: 300px;
+  }
+
+  .back-btn {
+    font-size: 14px;
+  }
+
+  .orders-container {
+    padding: 10vh 0;
+  }
+
+  .order-heading {
+    margin-bottom: 10px;
+  }
+
+  .orders-card {
+    width: 85vw;
+  }
+
+  .order-btn {
+    position: relative;
+    bottom: 0px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 800px) {
+  .category-sidebar {
+    width: 34vw;
+  }
+
+  .sidebar-heading {
+    margin: 25px 16px;
+    font-size: 1.3rem;
+  }
+
+  .category-btn {
+    padding: 16px;
+  }
+
+  .items-container {
+    margin: 5vh 1vw;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cart-card,
+  .completed-card {
+    width: 350px;
+  }
+
+  .orders-container {
+    padding: 10vh 0;
+  }
+
+  .order-heading {
+    margin-bottom: 10px;
+  }
+
+  .orders-card {
+    width: 80vw;
+  }
+
+  .order-btn {
+    position: relative;
+    bottom: 0px;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1000px) {
+  .sidebar-heading {
+    margin: 25px 16px;
+    font-size: 1.3rem;
+  }
+
+  .category-btn {
+    padding: 16px;
+  }
+
+  .items-container {
+    margin: 5vh 1vw;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cart-card,
+  .completed-card {
+    width: 400px;
+  }
+
+  .orders-container {
+    padding: 10vh 0;
+  }
+
+  .order-heading {
+    margin-bottom: 10px;
+  }
+
+  .orders-card {
+    width: 80vw;
+  }
+
+  .order-btn {
+    position: relative;
+    bottom: 0px;
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1200px) {
+  .items-container {
+    margin: 5vh 1vw;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
